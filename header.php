@@ -82,9 +82,9 @@
     
     </style>
         <!--Import Google Icon Font-->
-        <link href="/css/mat_icon.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="/css/mat.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <!-- icon @ favicon -->
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json">
@@ -120,7 +120,7 @@
             </li>
 
             <li class="logo"><a id="logo-container" href="/" class="brand-logo">
-        <object id="front-page-logo" type="image/svg+xml" data="/assets/pw.svg" alt="Your browser does not support SVG">Your browser does not support SVG</object></a></li>
+        <object id="front-page-logo" type="image/svg+xml" data="/res/logo.png" alt="Your browser does not support SVG">Your browser does not support SVG</object></a></li>
         <li class="divider" tabindex="-1"></li>
 
             <li><a tabindex="-5" href="/" class="supera brand" style="margin-left:-10px"><i class="material-icons">home</i>Home</a></li>
@@ -142,10 +142,10 @@
                     <a class="collapsible-header waves-effect waves-teal"><i class="material-icons">school</i>Lakshya JEE 1.0</a>
                     <div class="collapsible-body">
                       <ul>
-                        <li><a href="/lakshyabatchnew/physics">Physics</a></li>
-                        <li><a href="/lakshyabatchnew/maths">Maths</a></li>
-                        <li><a href="/lakshyabatchnew/biology">Biology</a></li>
-                        <li><a href="/lakshyabatchnew/chemistery">Chemistery</a></li>
+                        <li><a href="/attendence.php"><i class="material-icons">school</i>Attendence</a></li>
+                        <li><a href="/studentdetails.php"><i class="material-icons">info</i>My Details</a></li>
+                        <li><a href="/assignments.php"><i class="material-icons">assignment</i>Assignments</a></li>
+                        <li><a href="/addnote.php"><i class="material-icons">note_add</i>Add note</a></li>
 
 
                       </ul>
