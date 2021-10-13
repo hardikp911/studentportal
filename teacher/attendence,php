@@ -1,0 +1,25 @@
+
+<?php include('../header.php'); 
+
+
+
+
+if(checkTeacher()){
+    ?>
+
+
+
+
+
+
+
+
+
+    <?php
+
+}
+
+
+include('../footer.php');
+?>
+

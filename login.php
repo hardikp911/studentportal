@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+// print_r($_SESSION);
+
 include("conn.php");
 
 if(isset($_POST['submit'])){
@@ -56,7 +60,7 @@ if(isset($_POST["LoginSumbit"])){
     // die();
 }
 
-if(empty($prn) && is_numeric($phone)){
+if(empty($prn) || is_numeric($phone)){
     $err[] = "Enter your prn";
 }
 
@@ -75,21 +79,31 @@ if(empty($err)){
 
 
   if ($count == 1) {
+
+    $_SESSION['aid'] = $ress["id"];
+    
     if($ress["type"] == "t"){
-      $_SESSION["admin"] = $name;
+      $_SESSION["t"] = $name;
+      $_SESSION["type"] = 't';
 
     }
-      $_SESSION["user"] = $name;
-echo '<script>location.replace("header.php")</script>';      
+
+    if($ress["type"] == "s"){
+      $_SESSION["s"] = $name;
+      $_SESSION["type"] = 's';
+
+
+    }
+
+    echo '<script>location.replace("dash.php")</script>';      
     }else{
-      $err = 'please sign_up';
-      
+      $err[] = 'Wrong Credencials';
     }
 }
 }
 
 
-print_r($err);
+// print_r($err);
 
 
 ?>
@@ -327,7 +341,7 @@ print_r($err);
   <fieldset class="form" >
     <legend class="form__legend">OR</legend>
   <form action="" class="form__body form-login" method="POST">  
-      <?php foreach($err as $e) {echo $e . '<br>';} ?>
+      <?php foreach($err as $e) {echo '<div style="color:red">'.$e . '</div><br>';} ?>
     <input class="form__input" type="number" name="prn" placeholder="prn">
     <input class="form__input" type="text" name="name" placeholder="name">   
      <button class="btn" type="submit"  name="LoginSumbit" value="login">Sign in</button>
@@ -376,7 +390,7 @@ print_r($err);
      <button class="btn" name ="submit" type="submit">Sign up</button> 
   </form>   -->
     <form action="" method="POST" class="form__body form-login"> 
-    <?php foreach($err as $e) {echo $e . '<br>';} ?>
+    <?php foreach($err as $e) {echo '<div style="color:red">'.$e . '</div><br>';} ?>
 
 
               <div  class="input__group">
