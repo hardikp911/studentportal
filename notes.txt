@@ -94,3 +94,7 @@ include('../footer.php');
 
 
 <?php echo $currentURL ?>/
+
+
+
+user id = $_SESSION["aid"];

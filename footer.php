@@ -101,7 +101,7 @@
 <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker
-            .register('/res/sw.js', {
+            .register('<?=$currentURL ?>/res/sw.js', {
                 scope: '/'
             })
             .then(function(registration) {

@@ -54,9 +54,6 @@ function checkStudent()
 
   <!-- font awesome -->
   <style>
-    table {
-      margin: 10px !important;
-    }
 
     nav {
       position: fixed;
@@ -136,6 +133,11 @@ function checkStudent()
     }
 
 
+    main{
+      margin: 50px;
+    }
+
+
 
     .docs-footer {
       margin-top: 40px;
@@ -177,7 +179,7 @@ function checkStudent()
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- icon @ favicon -->
   <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="<?=$currentURL ?>/manifest.json">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
   <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet" />
   <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
