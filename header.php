@@ -19,6 +19,8 @@ function checkStudent()
     return false;
   }
 }
+
+
 ?>
 
 
@@ -54,6 +56,17 @@ function checkStudent()
 
   <!-- font awesome -->
   <style>
+    .err {
+      color: red;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .send {
+      color: green;
+      font-size: 20px;
+      font-weight: 600;
+    }
 
     nav {
       position: fixed;
@@ -133,7 +146,7 @@ function checkStudent()
     }
 
 
-    main{
+    main {
       margin: 50px;
     }
 
@@ -172,6 +185,11 @@ function checkStudent()
     .neu:active {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.15), inset -5px -5px 10px white;
     }
+
+
+    a.collapsible-header.waves-effect.waves-teal {
+    padding: 0 32px;
+}
   </style>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -179,7 +197,7 @@ function checkStudent()
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- icon @ favicon -->
   <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="manifest" href="<?=$currentURL ?>/manifest.json">
+  <link rel="manifest" href="<?= $currentURL ?>/manifest.json">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
   <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet" />
   <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
@@ -208,7 +226,7 @@ function checkStudent()
         <li><a style="display:none;" class="sidenav-close" href="#!"></a></li>
         </li>
 
-        <li class="logo"><a id="logo-container"class="brand-logo">
+        <li class="logo"><a id="logo-container" class="brand-logo">
 
 
 
@@ -244,6 +262,39 @@ function checkStudent()
           <li><a href="<?php echo $currentURL ?>/student/request.php"><i class="material-icons">request_page</i>requests by students</a></li>
 
 
+
+          <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+              <li>
+                <a class="collapsible-header waves-effect waves-teal"><i class="material-icons">info</i>Lectures</a>
+                <div class="collapsible-body">
+                  <ul>
+
+                    <?php
+
+
+                    $query = "SELECT * FROM `subjects`";
+                    $res = mysqli_query($connection, $query);
+                    $ress = mysqli_fetch_all($res, MYSQLI_ASSOC);
+
+                    foreach($ress as $ad){
+                    ?>
+
+                    <li>    <a href="<?= $currentURL . '/student/lec.php?sub_id='.$ad["id"] ;?> ">   <?= $ad["name"]; ?>   </a></li>
+
+                    <?php
+                    }
+                    ?>
+
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+
+
+
           <li><a href="<?php echo $currentURL ?>/logout.php"><i class="material-icons">logout</i>logout</a></li>
 
 
@@ -255,14 +306,14 @@ function checkStudent()
 
           <li><a href="<?php echo $currentURL ?>/teacher/attendence.php"><i class="material-icons">school</i>Add Attendence of Today</a></li>
           <li><a href="<?php echo $currentURL ?>/teacher/uploadnotes.php"><i class="material-icons">note_add</i>upload subject notes</a></li>
-          <li><a href="<?php echo $currentURL ?>/teacher/viewassign.php"><i class="material-icons">assignments</i>upload assignments</a></li>
+          <!-- <li><a href="/teacher/viewassign.php"><i class="material-icons">assignments</i>upload assignments</a></li> -->
 
           <li><a href="<?php echo $currentURL ?>/teacher/viewassign.php"><i class="material-icons">assignments</i>assignments by students</a></li>
 
           <li><a href="<?php echo $currentURL ?>/teacher/checkrequests.php"><i class="material-icons">note</i> requests from students</a></li>
 
           <li><a href="<?php echo $currentURL ?>/logout.php"><i class="material-icons">logout</i>logout</a></li>
-          <?php } ?>
+        <?php } ?>
 
 
 

@@ -109,7 +109,7 @@ foreach($ress as $a){
       </table>
             
       <H4>
-        AVERAGE PRESENT OF ALL SUBJECTS : <?= $avg_percent ?>
+        AVERAGE PRESENT OF ALL SUBJECTS : <?= $avg_percent ?> %
 
       </H4>
 
