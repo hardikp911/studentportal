@@ -22,7 +22,8 @@ if(checkStudent()){
           <tr>
               <th>Subjects</th>
               <th>No. of Lec.</th>
-              <th>A/P</th>
+              <th>PRESENT</th>
+              <th>PRESENT %</th>
           </tr>
         </thead>
 
@@ -82,7 +83,8 @@ foreach($ress as $a){
     <td><?= $a['name'];?></td>
     <td><?= 25;?></td>
 
-    <td><?= $count*100/25 ?></td>
+    <td><?= $count?></td>
+    <td><?= $count*4 ?>%</td>
     
     
     
@@ -103,10 +105,13 @@ foreach($ress as $a){
         ?>
 
 
-<?= $avg_percent ?>
         </tbody>
       </table>
             
+      <H4>
+        AVERAGE PRESENT OF ALL SUBJECTS : <?= $avg_percent ?>
+
+      </H4>
 
 
 

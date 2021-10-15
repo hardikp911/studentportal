@@ -208,7 +208,7 @@ function checkStudent()
         <li><a style="display:none;" class="sidenav-close" href="#!"></a></li>
         </li>
 
-        <li class="logo"><a id="logo-container" href="/" class="brand-logo">
+        <li class="logo"><a id="logo-container"class="brand-logo">
 
 
 
@@ -236,11 +236,12 @@ function checkStudent()
 
         <?php if ($_SESSION['s']) {  ?>
 
+          <li><a href="<?php echo $currentURL ?>/student/details.php"><i class="material-icons">info</i>My Details</a></li>
 
           <li><a href="<?php echo $currentURL ?>/student/attendence.php"><i class="material-icons">school</i>Attendence</a></li>
-          <li><a href="<?php echo $currentURL ?>/student/details.php"><i class="material-icons">info</i>My Details</a></li>
-          <li><a href="<?php echo $currentURL ?>/student/assignments.php"><i class="material-icons">assignment</i>Assignments</a></li>
-          <li><a href="<?php echo $currentURL ?>/student/addnote.php"><i class="material-icons">note_add</i>Add note</a></li>
+          <li><a href="<?php echo $currentURL ?>/student/teachers_assignment.php"><i class="material-icons">assignment</i>Assignments</a></li>
+          <li><a href="<?php echo $currentURL ?>/student/uploadassignments.php"><i class="material-icons">note_add</i>upload assignments</a></li>
+          <li><a href="<?php echo $currentURL ?>/student/request.php"><i class="material-icons">request_page</i>requests by students</a></li>
 
 
           <li><a href="<?php echo $currentURL ?>/logout.php"><i class="material-icons">logout</i>logout</a></li>
@@ -250,10 +251,16 @@ function checkStudent()
 
 
         <?php if ($_SESSION['t']) {  ?>
-          <li><a href="<?php echo $currentURL ?>/teacher/attendence.php"><i class="material-icons">school</i>Add Attendence of Today</a></li>
-          <li><a href="<?php echo $currentURL ?>/teacher/checkleave.php"><i class="material-icons">school</i>Check Leave Notes</a></li>
-
           <li><a href="<?php echo $currentURL ?>/student/details.php"><i class="material-icons">info</i>My Details</a></li>
+
+          <li><a href="<?php echo $currentURL ?>/teacher/attendence.php"><i class="material-icons">school</i>Add Attendence of Today</a></li>
+          <li><a href="<?php echo $currentURL ?>/teacher/uploadnotes.php"><i class="material-icons">note_add</i>upload subject notes</a></li>
+          <li><a href="<?php echo $currentURL ?>/teacher/viewassign.php"><i class="material-icons">assignments</i>upload assignments</a></li>
+
+          <li><a href="<?php echo $currentURL ?>/teacher/viewassign.php"><i class="material-icons">assignments</i>assignments by students</a></li>
+
+          <li><a href="<?php echo $currentURL ?>/teacher/checkrequests.php"><i class="material-icons">note</i> requests from students</a></li>
+
           <li><a href="<?php echo $currentURL ?>/logout.php"><i class="material-icons">logout</i>logout</a></li>
           <?php } ?>
 

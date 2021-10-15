@@ -132,10 +132,14 @@ if(empty($err)){
         }
 
         body {
+          background-image: url("res/mit-pune1.jpg");
+          background-size: cover;
+          background-position: center;
+         /* height: 100vh; */
         font-size: 1.6rem;
         font-weight: 200;
         font-family: "Montserrat", sans-serif;
-        min-height: 100vh;
+        /* min-height: 100vh; */
         }
 
         .main-page {
@@ -270,7 +274,7 @@ if(empty($err)){
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #FFFFFF;
+        color:aliceblue;
         font-family: "Raleway", sans-serif;
         font-size: 1.8rem;
         line-height: 2rem;
@@ -322,9 +326,9 @@ if(empty($err)){
 <div class="main-page">
 
   <div class="smooth login" id="login">
-  <h1 class="login__header header">Welcome back to MIT-WPU</h1>
-  <p class="login__byline">It's good to see you again</p>
-  <div class="social-media__container">
+  <h1 class="login__header header" style="color: #FFFFFF;">Welcome back to MIT-WPU</h1>
+  <p class="login__byline"style="color: #FFFFFF;">It's good to see you again</p>
+  <!-- <div class="social-media__container">
     <span class="fa-stack fa-lg social-media__icon icon">
     <i class="fas fa-circle fa-stack-2x" style="color: #48556D;"></i>
     <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -337,9 +341,9 @@ if(empty($err)){
     <i class="fas fa-circle fa-stack-2x" style="color: #48556D;"></i>
     <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
     </span>
-  </div>
+  </div> -->
   <fieldset class="form" >
-    <legend class="form__legend">OR</legend>
+    <legend class="form__legend"style="color: #FFFFFF;"><h3>PLEASE LOGIN IN</h3></legend>
   <form action="" class="form__body form-login" method="POST">  
       <?php foreach($err as $e) {echo '<div style="color:red">'.$e . '</div><br>';} ?>
     <input class="form__input" type="number" name="prn" placeholder="prn">
@@ -352,16 +356,16 @@ if(empty($err)){
 
   <div class="switch">
   <div class="switch__text-container"  id="switch-text">
-    <h1 class="switch__header header">Not yet a member?</h1>
-    <p>Sign up and discover what we can do for you</p>
+    <h2 class="switch__header header">please check your details</h2>
+    <!-- <p>Sign up and discover what we can do for you</p> -->
   </div>
-   <button class="btn-white btn" id="switch-button">Forget Password</button>
+   <button class="btn-white btn" id="switch-button">Forget Prn</button>
 </div>
   
     <div class="smooth signup hide-view" id="signup">
-  <h1 class="signup__header header">Forget Something!</h1>
+  <h1 class="signup__header header"style="color: #FFFFFF;">Forget Something!</h1>
   <p class="signup__byline"></p>
-  <div class="social-media__container">
+  <!-- <div class="social-media__container">
     <span class="fa-stack fa-lg social-media__icon icon">
     <i class="fas fa-circle fa-stack-2x" style="color: #48556D;"></i>
     <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -374,9 +378,32 @@ if(empty($err)){
     <i class="fas fa-circle fa-stack-2x" style="color: #48556D;"></i>
     <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
     </span>
-  </div>
+  </div> -->
   <fieldset class="form">
-    <legend class="form__legend">OR</legend>
+    <legend class="form__legend"style="color: #FFFFFF;"><h3> PLEASE ENTER DETAILS </h3></legend>
+
+    <!-- <form action="" class="form__body form-login" method="POST">   -->
+      <?php foreach($err as $e) {echo '<div style="color:red">'.$e . '</div><br>';} ?>
+      <input class="form__input" type="text" name="name" placeholder="name">   
+      <input class="form__input" type="phone" name="phone" placeholder="phone">   
+
+    <!-- <input class="form__input" type="number" name="prn" placeholder="prn"> -->
+
+    <input class="form__input" type="email" name="email" placeholder="email">   
+     <button class="btn center" type="submit"  name="Sumbit" value="login">show prn</button>
+      
+  </form>  
+
+
+
+
+
+
+
+
+
+
+
   <!-- <form action="" class="form__body form-login" method="POST">
     <div class="input__group">
         <input class="form__input form__input-half" type="text" name ="name" placeholder="name">
@@ -389,28 +416,25 @@ if(empty($err)){
    
      <button class="btn" name ="submit" type="submit">Sign up</button> 
   </form>   -->
-    <form action="" method="POST" class="form__body form-login"> 
+    <!-- <form action="" method="POST" class="form__body form-login"> 
     <?php foreach($err as $e) {echo '<div style="color:red">'.$e . '</div><br>';} ?>
 
 
               <div  class="input__group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" class="form__input form__input-half"    name="name">
-              </div>
-              <div  class="input__group">
+/                <input type="text" class="form__input form__input-half"    name="name">
+              </div> -->
+              <!-- <div  class="input__group">
             <label for="prn">prn</label>
             <input type="number"  class="form__input form__input-half" name="prn">
-            </div>
-            <div  class="input__group">
-            <label for="phone">phone</label>
-            <input type="number"  class="form__input form__input-half" name="phone">
+            </div> -->
+            <!-- <div  class="input__group">
+/            <input type="number"  class="form__input form__input-half" name="phone">
             </div>
             <div class="form-group">
-            <label for="email">email</label>
-            <input type="email"  class="form__input form__input-half"  name="email">
+/            <input type="email"  class="form__input form__input-half"  name="email">
             </div>
               <input type="submit" class="btn btn-primary" name="submit"></input>
-            </form>
+            </form> -->
     </fieldset>
 </div>
   
