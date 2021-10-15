@@ -98,7 +98,7 @@ foreach($ress as $a){
           <?php 
         }
 
-        $avg_percent = $percentages / 5;
+        // $avg_percent = $percentages / 5;
 
 
 
@@ -109,7 +109,7 @@ foreach($ress as $a){
       </table>
             
       <H4>
-        AVERAGE PRESENT OF ALL SUBJECTS : <?= $avg_percent ?> %
+        <!-- AVERAGE PRESENT OF ALL SUBJECTS : <?= $avg_percent ?> % -->
 
       </H4>
 

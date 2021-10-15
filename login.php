@@ -115,7 +115,7 @@ if(empty($err)){
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Login/Signup Page </title>
+  <title>login</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:200,400,700,900'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300,400'>
 <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>

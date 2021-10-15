@@ -257,8 +257,8 @@ function checkStudent()
           <li><a href="<?php echo $currentURL ?>/student/details.php"><i class="material-icons">info</i>My Details</a></li>
 
           <li><a href="<?php echo $currentURL ?>/student/attendence.php"><i class="material-icons">school</i>Attendence</a></li>
-          <li><a href="<?php echo $currentURL ?>/student/teachers_assignment.php"><i class="material-icons">assignment</i>Assignments</a></li>
-          <li><a href="<?php echo $currentURL ?>/student/uploadassignments.php"><i class="material-icons">note_add</i>upload assignments</a></li>
+          <!-- <li><a href="/student/teachers_assignment.php"><i class="material-icons">assignment</i>Assignments</a></li> -->
+          <!-- <li><a href="/student/uploadassignments.php"><i class="material-icons">note_add</i>upload assignments</a></li> -->
           <li><a href="<?php echo $currentURL ?>/student/request.php"><i class="material-icons">request_page</i>requests by students</a></li>
 
 
@@ -305,10 +305,11 @@ function checkStudent()
           <li><a href="<?php echo $currentURL ?>/student/details.php"><i class="material-icons">info</i>My Details</a></li>
 
           <li><a href="<?php echo $currentURL ?>/teacher/attendence.php"><i class="material-icons">school</i>Add Attendence of Today</a></li>
-          <li><a href="<?php echo $currentURL ?>/teacher/uploadnotes.php"><i class="material-icons">note_add</i>upload subject notes</a></li>
+          <!-- <li><a href="/teacher/uploadnotes.php"><i class="material-icons">note_add</i>upload subject notes</a></li> -->
+          <li><a href="<?php echo $currentURL ?>/teacher/addlec.php"><i class="material-icons">info</i>Add Lectures</a></li>
           <!-- <li><a href="/teacher/viewassign.php"><i class="material-icons">assignments</i>upload assignments</a></li> -->
 
-          <li><a href="<?php echo $currentURL ?>/teacher/viewassign.php"><i class="material-icons">assignments</i>assignments by students</a></li>
+          <!-- <li><a href="/teacher/viewassign.php"><i class="material-icons">assignments</i>assignments by students</a></li> -->
 
           <li><a href="<?php echo $currentURL ?>/teacher/checkrequests.php"><i class="material-icons">note</i> requests from students</a></li>
 

@@ -54,8 +54,8 @@ if (checkStudent()) {
 
 
                         <option value='<?= $row["id"] ?>' <?php if ($row['id'] == $row_new['id']) {
-                                    echo 'selected="selected"';
-                                } ?>><?php echo htmlspecialchars($row['name']); ?></option>
+                                                                echo 'selected="selected"';
+                                                            } ?>><?php echo htmlspecialchars($row['name']); ?></option>
 
 
 
@@ -82,38 +82,55 @@ if (checkStudent()) {
 
 
 
-    <?php if (isset($row_new)) : ?>
-        <div class='video'>
-            <script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script>
-            <script type="text/javascript">
-                jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';
-            </script>
-            <div id="myElement"></div>
-            <script type="text/javascript">
-                jwplayer("myElement").setup({
-                    aspectratio: "16:9",
-                    width: '100%',
-                    aspectratio: '16:9',
-                    autostart: false,
-                    file: '<?= $row_new['link'] ?>',
-                    abouttext: 'Portal',
-                    controls: true,
-                    logo: {
-                        "file": "<?= $currentURL ?>/res/logo.png",
-                        "hide": true,
-                        "margin": "10",
-                        "position": "control-bar"
-                    },
+    <?php if (isset($row_new)) :
 
-                });
-            </script>
-        </div>
+            if (strpos($row_new['link'], 'youtube') !== false) {
+                $video_id = explode("?v=", $row_new['link']);
+                $video_id = $video_id[1];
+                $final_lnk = "https://www.youtube.com/embed/" . $video_id;
 
-        <?php if (!empty($row_new['d_link'])) { ?>
-            <a href="<?= $row_new['d_link'] ?>" class="btn">Download This Lecture</a>
+    ?>
 
-        <?php } ?>
-    <?php endif; ?>
+            <iframe width="100%" height="600px" src="<?=$final_lnk ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+        <?php
+            } else {
+        ?>
+
+
+            <div class='video'>
+                <script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script>
+                <script type="text/javascript">
+                    jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';
+                </script>
+                <div id="myElement"></div>
+                <script type="text/javascript">
+                    jwplayer("myElement").setup({
+                        aspectratio: "16:9",
+                        width: '100%',
+                        aspectratio: '16:9',
+                        autostart: false,
+                        file: '<?= $row_new['link'] ?>',
+                        abouttext: 'Portal',
+                        controls: true,
+                        logo: {
+                            "file": "<?= $currentURL ?>/res/logo.png",
+                            "hide": true,
+                            "margin": "10",
+                            "position": "control-bar"
+                        },
+
+                    });
+                </script>
+            </div>
+
+            <?php if (!empty($row_new['d_link'])) { ?>
+                <a href="<?= $row_new['d_link'] ?>" class="btn">Download This Lecture</a>
+
+            <?php } ?>
+    <?php }
+        endif; ?>
 
 
 

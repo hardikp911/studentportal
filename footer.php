@@ -4,7 +4,7 @@
     <div class="grey-text container">
 
         Copyright (c) Student Portal
-        <br>Developed By ❤️ with Hardik Parmar
+        <br>Developed By ❤️ with Hardik Parmar , aaditya singh , amogh pathak , apurv kulkarni , akash pandya , vaibhav patil
         <br>
 
     </div>
