@@ -132,20 +132,20 @@ if (checkTeacher()) {
                         //  echo $today;
 
 
-                        $querys = "SELECT * FROM `attendence` where `date`='$today' and student_id={$s['id']}";
+                        $querys = "SELECT * FROM `attendence` where `date`='$today' and student_id={$s['id']} and teacher_id={$_SESSION['aid']}";
                         $resss = mysqli_query($connection, $querys);
                         $res = mysqli_fetch_assoc($resss);
 
 
                         if (empty($res)) {
 
-                            $querys = "INSERT into `attendence`(ap,date,student_id,teacher_id) values('p' , '$today' , {$s["id"]},{$_SESSION['aid']})";
+                            $querys = "INSERT into `attendence`(ap,date,student_id,teacher_id) values('p' , '$today' , {$s["id"]},{$_SESSION['aid']}) ";
                             $resss = mysqli_query($connection, $querys);
 
 
 
                             //remove unwanted ids 
-                            $queryass = "  ALTER TABLE `attendence` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;";
+                            $queryass = "  ALTER TABLE `attendence` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0; ";
                             $asasasa = mysqli_query($connection, $queryass);
                         }
 

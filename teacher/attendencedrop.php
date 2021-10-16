@@ -21,7 +21,7 @@ if(isset($_POST['sumbitDrop'])){
     $date = date($date);    
 
 
-    $querys = "DELETE FROM `attendence`  where date='$date'";
+    $querys = "DELETE FROM `attendence`  where date='$date' and teacher_id={$_SESSION['aid']}";
     $resss = mysqli_query($connection, $querys);
 
 
