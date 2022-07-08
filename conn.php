@@ -1,10 +1,11 @@
 <?php
 error_reporting(0);
-   $host = 'anqe8cs5ccj9.ap-south-2.psdb.cloud';
-   $dbname = 'student_database';
-   $dbpassword = 'pscale_pw_UG9qS4r0i3ueFVou8QkfCRZajenztwNDiDB8dUdQPF0';
-   $dbuser = '99lmdzna9tlr';
-  
+   $host = 'ypty5a7p9v40.us-east-1.psdb.cloud';
+   $dbname = 'somegumtank';
+   $dbpassword = 'pscale_pw_wgLtmD80lFTu2w3YZfXebdF2h3qLzEyxwRK9bUezERg';
+   $dbuser = 'lio7hxepbhs1';
+
+
   $connection = mysqli_init();
   $connection->ssl_set(NULL, NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
   $connection->real_connect($host,$dbuser,$dbpassword,$dbname);
