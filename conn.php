@@ -2,8 +2,8 @@
 error_reporting(0);
    $host = 'ypty5a7p9v40.us-east-1.psdb.cloud';
    $dbname = 'somegumtank';
-   $dbpassword = 'pscale_pw_wgLtmD80lFTu2w3YZfXebdF2h3qLzEyxwRK9bUezERg';
-   $dbuser = 'lio7hxepbhs1';
+   $dbpassword = 'pscale_pw_-ggFOjIfShyWzYnw1xPWEebkTybOLSyzA6xUoAzXdm4';
+   $dbuser = '6pg99lkzkksc';
 
 
   $connection = mysqli_init();
@@ -14,10 +14,10 @@ error_reporting(0);
    
     // Check connection
 if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " + mysqli_connect_error();
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();
 }
 else {
-    //  echo 'successfull';
+   //   echo 'successfull';
 }
 ?>
