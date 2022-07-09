@@ -1,9 +1,9 @@
 <?php
-error_reporting(0);
- $host = 'ypty5a7p9v40.us-east-1.psdb.cloud';
+error_reporting(1);
+$host = 'ypty5a7p9v40.us-east-1.psdb.cloud';
    $dbname = 'somegumtank';
-   $dbpassword = 'pscale_pw_sq5Hx2_aUU9-qVtM1ilsyXGGIlxAWmwIyElFx3dFi4Q';
-   $dbuser = 'oqqy0onp3adc';
+   $dbpassword = 'pscale_pw_3JfhnMKhW8kqcul9NgvHL5NQ4Dne7dhPdYG5WsrKwmc';
+   $dbuser = 'prukj4mw7ohw';
 
 
   $connection = mysqli_init();
