@@ -1,9 +1,11 @@
 <?php
-error_reporting(1);
-$host = 'ypty5a7p9v40.us-east-1.psdb.cloud';
-   $dbname = 'somegumtank';
-   $dbpassword = 'pscale_pw_y3yGJ7cP5ICkZlEVZjF3CDFJbBr0DV9oZeC6JyjV5Jw';
-   $dbuser = '9p6cb850b5f0';
+
+//error_reporting(0);
+ //  $host = 'ypty5a7p9v40.us-east-1.psdb.cloud';
+ //  $dbname = 'somegumtank';
+  // $dbpassword = 'pscale_pw_wgLtmD80lFTu2w3YZfXebdF2h3qLzEyxwRK9bUezERg';
+  // $dbuser = 'lio7hxepbhs1';
+ main
 
 
   $connection = mysqli_init();
